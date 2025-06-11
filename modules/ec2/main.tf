@@ -54,7 +54,7 @@ resource "aws_launch_template" "app_lt" {
     name = var.iam_instance_profile_name
   }
 
-  user_data = base64encode(file("${path.module}/user_data.sh"))
+  user_data = base64encode(file("${path.module}/scripts/web-userdata.sh"))
 
   network_interfaces {
     associate_public_ip_address = false

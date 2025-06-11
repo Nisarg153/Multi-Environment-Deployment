@@ -1,6 +1,6 @@
 #!/bin/bash
 
-su - ec2-user <<'EOF'
+sudo su - ec2-user <<'EOF'
 sudo yum update -y
 
 cd /home/ec2-user

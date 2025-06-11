@@ -44,4 +44,7 @@ variable "stream_view_type" {
   default = "NEW_AND_OLD_IMAGES"
 }
 
+variable "iam_instance_profile_name" {
+  type    = string
+}
 
