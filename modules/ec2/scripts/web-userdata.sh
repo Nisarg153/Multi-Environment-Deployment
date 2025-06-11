@@ -1,4 +1,6 @@
 #!/bin/bash
+
+su - ec2-user <<'EOF'
 sudo yum update -y
 
 cd /home/ec2-user
@@ -13,3 +15,5 @@ sudo chown -R ec2-user:ec2-user /home/ec2-user/Multi-Environment-Deployment
 pm2 start app.js --name app
 pm2 startup systemd -u ec2-user --hp /home/ec2-user | tail -n 1 | sh
 pm2 save
+
+EOF
