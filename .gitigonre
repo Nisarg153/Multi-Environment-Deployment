@@ -1,0 +1,36 @@
+# Node.js
+node_modules/
+.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# PM2 Logs
+~/.pm2/logs/
+*.log
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+crash.log
+terraform.tfvars
+override.tf
+override.tf.json
+*.backup
+**/.terraform/
+
+
+# Local settings
+.DS_Store
+.idea/
+.vscode/
+
+# Zip artifacts or binaries
+*.zip
+*.tar.gz
+
+# GitHub Actions temp
+.github/workflows/*.bak
+
+*.log*
