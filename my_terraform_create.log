@@ -1,0 +1,33 @@
+ 
+==> Create the resources :us-east-1
+ 
+
+[0m[1mInitializing the backend...[0m
+[0m[32m
+Successfully configured the backend "s3"! Terraform will automatically
+use this backend unless the backend configuration changes.[0m
+[0m[1mInitializing modules...[0m
+- dynamodb in ..\..\modules\dynamodb
+- iam in ..\..\modules\iam
+- vpc in ..\..\modules\vpc
+[31m[31m╷[0m[0m
+[31m│[0m [0m[1m[31mError: [0m[0m[1mDuplicate resource "aws_iam_role_policy_attachment" configuration[0m
+[31m│[0m [0m
+[31m│[0m [0m[0m  on ..\..\modules\iam\main.tf line 31:
+[31m│[0m [0m  31: [4mresource "aws_iam_role_policy_attachment" "dynamodb_rw"[0m {[0m
+[31m│[0m [0m
+[31m│[0m [0mA aws_iam_role_policy_attachment resource named "dynamodb_rw" was already
+[31m│[0m [0mdeclared at ..\..\modules\iam\main.tf:11,1-56. Resource names must be
+[31m│[0m [0munique per type in each module.
+[31m╵[0m[0m
+[0m[0m
+[31m╷[0m[0m
+[31m│[0m [0m[1m[31mError: [0m[0m[1mDuplicate resource "aws_iam_role_policy_attachment" configuration[0m
+[31m│[0m [0m
+[31m│[0m [0m[0m  on ..\..\modules\iam\main.tf line 31:
+[31m│[0m [0m  31: [4mresource "aws_iam_role_policy_attachment" "dynamodb_rw"[0m {[0m
+[31m│[0m [0m
+[31m│[0m [0mA aws_iam_role_policy_attachment resource named "dynamodb_rw" was already
+[31m│[0m [0mdeclared at ..\..\modules\iam\main.tf:11,1-56. Resource names must be
+[31m│[0m [0munique per type in each module.
+[31m╵[0m[0m
