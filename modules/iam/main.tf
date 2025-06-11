@@ -28,6 +28,12 @@ resource "aws_iam_role_policy_attachment" "s3_readonly" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess"
 }
 
+resource "aws_iam_role_policy_attachment" "dynamodb_rw" {
+  role       = aws_iam_role.app-role.name
+  policy_arn = aws_iam_policy.dynamodb_rw_policy.arn
+}
+
+
 # Trust policy allowing EC2 to assume the role
 data "aws_iam_policy_document" "ec2-assume-policy" {
   statement {
